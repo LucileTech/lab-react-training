@@ -26,7 +26,9 @@ const CreditCard = ({
       }}
     >
       <div className="threepartsofcard">
-        <img class="logo-image" src={type} alt="logo image" />
+        <picture className="logoCard">
+          <img class="logo-image" src={type} alt="logoimage" />
+        </picture>
         <h3> ●●●● ●●●● ●●●●{number.substr(12, 4)}</h3>
         <div className="cardInformation">
           <div className="carddetails">

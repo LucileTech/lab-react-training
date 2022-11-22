@@ -47,6 +47,7 @@
 .carddetails {
   display: flex;
   flex-direction: row;
+  margin-left: 1rem;
 }
 
 .className {
@@ -54,10 +55,28 @@
   flex-direction: row;
 }
 
+.logoCard {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
 .logo-image {
-  width: 200px;
+  width: 100px;
 }
 
 .DirverCardImage {
   width: 200px;
+}
+
+.nameofowner {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.CreditCard {
+  border-radius: 5%;
 }
