@@ -1,4 +1,5 @@
 import React from 'react';
+import VisaImage from '../assets/images/visa.png';
 
 const CreditCard = ({
   type,
@@ -10,11 +11,8 @@ const CreditCard = ({
   bgColor,
   color,
 }) => {
-  let srcCard;
-  if (type === 'Master Card') {
-    srcCard = '../assets/images/master-card.svg';
-  } else if (type === 'Visa') {
-    srcCard = '../assets/images/visa.png';
+  if (type === 'Visa') {
+    type = VisaImage;
   }
 
   return (
@@ -28,13 +26,13 @@ const CreditCard = ({
       }}
     >
       <div className="threepartsofcard">
-        <img src={srcCard} alt="CardPicture" />
-        <h3>{type}</h3>
+        <img class="logo-image" src={type} alt="logo image" />
         <h3>{number}</h3>
         <div className="cardInformation">
           <div className="carddetails">
             <h3>
-              Expires {expirationMonth}/{expirationYear}
+              Expires {expirationMonth < 10 ? '0' : ''}
+              {expirationMonth}/{expirationYear}
             </h3>
             <h3>{bank}</h3>
           </div>

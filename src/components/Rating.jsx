@@ -1,7 +1,8 @@
 import React from 'react';
 
-const Rating = (children) => {
-  if ((children >= 0) & (children < 1)) {
+const Rating = ({ children }) => {
+  console.log(children);
+  if (children >= 0 && children < 1) {
     return <div>☆☆☆☆☆</div>;
   } else if (children >= 1 && children < 2) {
     return <div>★☆☆☆☆</div>;
@@ -11,7 +12,7 @@ const Rating = (children) => {
     return <div>★★★☆☆</div>;
   } else if (children >= 4 && children < 5) {
     return <div>★★★★☆</div>;
-  } else if (children === 5) {
+  } else if (children == 5) {
     return <div>★★★★★</div>;
   }
 };
